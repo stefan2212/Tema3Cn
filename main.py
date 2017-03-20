@@ -1,5 +1,6 @@
 import Sum as s
 import Comparasion as c
+import time
 
 
 class Input:
@@ -55,7 +56,9 @@ def main():
     n_b, b_vector_b, diag_b, val_b, col_b = getInputFromText("b.txt")
     operation=s.Sum(n_a, n_b, diag_a, diag_b, val_a, val_b, col_a, col_b, b_vector_a, b_vector_b)
     # #print (operation.addDiag())
+    start_time=time.time()
     operation.addOthers()
+    print(abs(time.time()-start_time))
 
 
 main()
