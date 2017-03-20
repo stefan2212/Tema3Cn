@@ -33,7 +33,7 @@ class Sum:
         return []
 
     def eliminateValues(self, big_vec, vec):
-        while big_vec[0] == 0:
+        while big_vec[0]==0:
             big_vec.remove(0)
         for x in vec:
             big_vec.remove(x)
@@ -77,6 +77,5 @@ class Sum:
                     el_final.append(elements_b[l2])
                     col_final.append(columns_b[l2])
                     l2 += 1
-                el_final.append(0)
                 col_final.append(i - 1)
         return el_final, col_final

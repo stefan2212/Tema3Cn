@@ -59,8 +59,8 @@ def main():
     start_time = time.time()
     el_final, col_final = operation.addOthers()
     print(abs(time.time() - start_time))
-    print(val_sum)
-    print(el_final)
+    print(len(val_sum))
+    print(len(el_final))
 
 
 main()
