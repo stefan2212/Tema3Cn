@@ -42,34 +42,33 @@ class Sum:
                 print(elements_b)
                 columns_b = self.getColumsByLine(i, self.col_b[self.col_b.index(i):])
                 print(columns_b)
-               # elements_a = self.getValuesByLine(abs(i), self.val_a)
-               # columns_a = self.getColumsByLine(i, self.col_a[self.col_a.index(i):])
+                elements_a = self.getValuesByLine(abs(i), self.val_a)
+                columns_a = self.getColumsByLine(i, self.col_a[self.col_a.index(i):])
                 l1 = 0
                 l2 = 0
-        return
-        #         while l1 < len(columns_a) and l2 < len(columns_b):
-        #             if columns_a[l1] > columns_b[l2]:
-        #                 el_final.append(elements_b[l2])
-        #                 col_final.append(columns_b[l2])
-        #                 l2 += 1
-        #             elif columns_a[l1] < columns_b[l2]:
-        #                 el_final.append(elements_a[l1])
-        #                 col_final.append(columns_a[l1])
-        #                 l1 += 1
-        #             else:
-        #                 el_final.append(elements_a[l1] + elements_b[l2])
-        #                 col_final.append(columns_a[l1])
-        #                 l1 += 1
-        #                 l2 += 2
-        #         while l1 < len(columns_a):
-        #             el_final.append(elements_a[l1])
-        #             col_final.append(columns_a[l1])
-        #             l1 += 1
-        #         while l2 < len(columns_b):
-        #             el_final.append(elements_b[l2])
-        #             col_final.append(columns_b[l2])
-        #             l2 += 1
-        #         el_final.append(0)
-        #         col_final.append(i - 1)
-        # print(el_final)
-        # print(col_final)
+                while l1 < len(columns_a) and l2 < len(columns_b):
+                    if columns_a[l1] > columns_b[l2]:
+                        el_final.append(elements_b[l2])
+                        col_final.append(columns_b[l2])
+                        l2 += 1
+                    elif columns_a[l1] < columns_b[l2]:
+                        el_final.append(elements_a[l1])
+                        col_final.append(columns_a[l1])
+                        l1 += 1
+                    else:
+                        el_final.append(elements_a[l1] + elements_b[l2])
+                        col_final.append(columns_a[l1])
+                        l1 += 1
+                        l2 += 2
+                while l1 < len(columns_a):
+                    el_final.append(elements_a[l1])
+                    col_final.append(columns_a[l1])
+                    l1 += 1
+                while l2 < len(columns_b):
+                    el_final.append(elements_b[l2])
+                    col_final.append(columns_b[l2])
+                    l2 += 1
+                el_final.append(0)
+                col_final.append(i - 1)
+        print(el_final)
+        print(col_final)
