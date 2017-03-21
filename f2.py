@@ -162,12 +162,13 @@ vals_a, ind_a, b_a = from_file_cols("a.txt")
 vals_b, ind_b, b_b = from_file_cols("b.txt")
 vals_t, ind_t = transform_to_lines(vals_b, ind_b)
 
+
 """#### A x B ####"""
+print vals_a
+print ind_a
+print vals_t
+print ind_t
 vals_a_ori_b_file, ind_a_ori_b_file, b_aorib = from_file_cols("aorib.txt")
-print(vals_a)
-print(ind_a)
-print(vals_t)
-print(ind_t)
 vals_a_ori_b, ind_a_ori_b = a_ori_b(vals_a, ind_a, vals_t, ind_t)
 
 

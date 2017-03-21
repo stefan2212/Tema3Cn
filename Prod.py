@@ -21,27 +21,14 @@ class Prod:
                 it2 = 0
                 final_a_ori_b_ind.append(current_line)
                 final_a_ori_b_val.append(0)
-                while it2 < len(self.val_a):
-                    current_element = 0
-                    current_column = self.col_b[it2]
-                    i, j = it + 1, it2 + 1
-                    while i < len(self.val_a) and j < len(self.val_a) and self.val_a[i] != 0 and self.val_a[j] != 0:
-                        if self.col_b[j] < self.col_a[i]:
-                            j += 1
-                        else:
-                            if self.col_b[j] > self.col_a[i]:
-                                i += 1
-                            else:
-                                current_element += self.val_a[i] * self.val_b[j]
-                                i += 1
-                                j += 1
-                    if current_element != 0:
-                        final_a_ori_b_ind.append(current_column)
-                        final_a_ori_b_val.append(current_element)
-                    while j < len(self.val_b) and self.val_b[j] != 0:
-                        j += 1
-                    it2 = j
-            it += 1
+                while it2<len(self.val_b):
+                    element_curent=0
+                    curent_column=self.col_b[it]
+                    i,j=it+1,it+2
+                    while i<len(self.val_a) and j<len(self.val_b) and self.val_a[i]!=i and self.val_b[j]!=0:
+                        return
+                    it2+=1
+            it+=1
         return final_a_ori_b_val, final_a_ori_b_ind
 
     def a_mul_x(self,vals, ind_cols):
