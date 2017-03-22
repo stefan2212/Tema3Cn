@@ -64,7 +64,7 @@ def transpose(vals, ind_cols,n):
                 new_it = it
                 while vals_new[new_it] != 0:
                     new_it -= 1
-                ind_lines.append(abs(ind_cols_new[new_it]))
+                ind_lines.append(abs(ind_cols_new[new_it])-1)
     return new_vals, ind_lines
 
 

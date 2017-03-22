@@ -28,13 +28,12 @@ class Prod:
                     while i < len(self.val_a) and j < len(self.val_b) and self.val_a[i] != 0 and self.val_b[j] != 0:
                         if self.col_b[j] < self.col_a[i]:
                             j += 1
+                        elif self.col_b[j] > self.col_a[i]:
+                            i+=1
                         else:
-                            if self.col_b[j] > self.col_a[i]:
-                                i += 1
-                            else:
-                                current_element += self.val_a[i] * self.val_b[j]
-                                i += 1
-                                j += 1
+                            current_element += self.val_a[i] * self.val_b[j]
+                            i += 1
+                            j += 1
                     if current_element != 0:
                         final_a_ori_b_ind.append(current_column)
                         final_a_ori_b_val.append(current_element)
@@ -45,8 +44,8 @@ class Prod:
         return final_a_ori_b_val, final_a_ori_b_ind
 
     def a_mul_x(self,vals, ind_cols):
-        result_vector = [0 for i in range(0, self.n_a)]
-        x = [i for i in range(2017, -1, -1)]
+        result_vector = [0]*self.n_a
+        x = [i for i in range(self.n_a, -1, -1)]
         current_line = -1
         for it in range(len(ind_cols)):
             if vals[it] == 0:
